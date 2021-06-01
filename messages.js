@@ -71,6 +71,10 @@ function displayError(error, error_description) {
       <div>Error: ${error} </div>
       <div>Error Details: ${error_description} </div>
     </div>
+    <a class="btn startover"
+     href="/request_token">
+     <strong>Start Over</strong>
+    </a>
   </div>
   `
   )
@@ -87,6 +91,10 @@ function displayMessage(header, message) {
       <h1>${header}</h1>
       <div style="padding: 10px;">${message} </div>
     </div>
+    <a class="btn startover"
+     href="/request_token">
+     <strong>Start Over</strong>
+    </a>
   </div>
   `
   )
@@ -105,6 +113,10 @@ function displayMessage2(header, message, nextpart) {
     <div>
       ${nextpart}
     </div>
+    <a class="btn startover"
+     href="/request_token">
+     <strong>Start Over</strong>
+    </a>
   </div>
   `
   )

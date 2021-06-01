@@ -126,3 +126,10 @@ a:hover {
   background-color: rgba(0, 85, 204, 1);
   color: white;
 }
+
+.startover {
+    margin: 10px;
+    background-color: gray;
+}
+
+

@@ -420,11 +420,22 @@ async function getsnippet(siteid, sitename, prevcontent, res){
       content: content
     });
   } catch(error) {
-    console.log("getsnippet error: ", error);
-    content = messages.displayMessage2('Snippet Retrieve Failed', error.body, prevcontent)
-    res.render('base', {
-      content: content
-    });
+    console.log("getsnippet error: ", error, error.statusCode, error.body);
+    var bodyjson = JSON.parse(error.body);
+    // console.log("bodyjson: ", bodyjson);
+    if(error.statusCode == 404 && bodyjson.errors[0].code == "NOT_FOUND") {
+      // no snippet yet, don't show error
+      content = messages.displayMessage2('No Snippets. Yet.', "Configure below to get started", prevcontent)
+      res.render('base', {
+        content: content
+      });
+    } else {
+      content = messages.displayMessage2('Snippet Retrieve Failed', bodyjson, prevcontent)
+      res.render('base', {
+        content: content
+      });
+    }
+
   }
 }
 
