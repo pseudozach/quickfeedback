@@ -1,0 +1,20 @@
+{
+  "name": "node-oauth-walkthrough",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cookie-parser": "*",
+    "dotenv": "^8.2.0",
+    "ejs": "*",
+    "express": "*",
+    "firebase-admin": "^9.9.0",
+    "md5": "*",
+    "square": "^11.0.0"
+  }
+}
